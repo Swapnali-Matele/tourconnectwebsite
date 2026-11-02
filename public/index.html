@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tour Connect API Demo</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Tour Connect Backend Demo</h1>
+
+      <div class="controls">
+        <button id="fetchToursBtn">View all tours</button>
+      </div>
+
+      <div id="loadingIndicator" class="loading-indicator" hidden>Loading tours...</div>
+
+      <form id="tourForm">
+        <h2>Create / Update Tour</h2>
+        <input id="tour_id" type="number" placeholder="tour_id" required />
+        <input id="title" type="text" placeholder="title" required />
+        <textarea id="description" placeholder="description" required></textarea>
+        <input id="pick_up" type="text" placeholder="pick_up" required />
+        <input id="meeting_point" type="text" placeholder="meeting_point" required />
+        <input id="drop_off" type="text" placeholder="drop_off" required />
+        <input id="duration" type="number" step="0.1" placeholder="duration" required />
+        <select id="duration_unit">
+          <option value="days">days</option>
+          <option value="hours">hours</option>
+          <option value="weeks">weeks</option>
+          <option value="months">months</option>
+        </select>
+        <button type="submit">Create Tour</button>
+      </form>
+
+      <div class="action-row">
+        <button id="updateTourBtn">Update Selected Tour</button>
+        <button id="deleteTourBtn" class="danger">Delete Selected Tour</button>
+      </div>
+
+      <div id="toast" class="toast"></div>
+      <div id="output" class="output"></div>
+    </div>
+
+    <script src="/script.js"></script>
+  </body>
+</html>
